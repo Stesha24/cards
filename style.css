@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  width: 1024px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0071a6;
+  border-bottom: 1px dotted #0071a6;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card-box {
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
+  position: relative;
+  padding: 15px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.card__photo {
+  width: 100%;
+  text-align: center;
+}
+
+.card__photo_img {
+  max-width: 100px;
+  height: auto;
+}
+
+.card__title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card__offer {
+  background-color:rgba(233, 30, 99, 0.2);
+  display: inline;
+  border-radius: 8px;
+  color: #111;
+  padding: 3px 6px 3px 6px;
+  font-size: 14px;
+  color: #e91e63;
+}
+
+.card__compare, .card__favour {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 7px 10px;
+  color: #444;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.card__compare:hover, .card__favour:hover {
+  background: #ff7300;
+  border: 1px solid #ff7300;
+  background-color: #ff7300;
+  border-bottom: 3px solid #e66800;
+  color: #fff;
+}
+
+.card__compare {
+  top: 15px;
+  right: 15px;
+}
+
+.card__favour {
+  top: 70px;
+  right: 15px;
+}
+
+.card__rating {
+  margin-top: 15px;
+  color: #333;
+}
+
+.card__cost {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 36px;
+  color: #333;
+}
+
+.card__buttons {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.button__buy1click {
+  cursor: pointer;
+  width: 59%;
+  padding: 7px 10px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #333;
+}
+
+.button__buy1click:hover {
+  background: #ff7300;
+  border: 1px solid #ff7300;
+  background-color: #ff7300;
+  border-bottom: 3px solid #e66800;
+  color: #fff;
+}
+
+.button__buy {
+  cursor: pointer;
+  width: 39%;
+  padding: 7px 10px;
+  font-size: 16px;
+  background: #ff7300;
+  border: 1px solid #ff7300;
+  background-color: #ff7300;
+  border-bottom: 3px solid #e66800;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.button__buy:hover {
+  background: #cc5c00;
+  background-color: #cc5c00;
+  border: 1px solid #cc5c00;
+  border-bottom: 3px solid #a84c00;
+}
+.fa-shopping-cart {
+  margin-right: 8px;
+}
+
+@media (max-width: 1024px) {
+  body{
+    width: 768px;
+    margin: 0 auto;
+  }
+  .card-box {
+    width: 49%;
+  }
+}
+
+@media (max-width: 768px) {
+  body{
+    width: 500px;
+    margin: 0 auto;
+  }
+  .card-box {
+    width: 100%;
+  }
+}
