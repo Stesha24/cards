@@ -161,7 +161,7 @@ a {
 
 @media (max-width: 1024px) {
   body{
-    width: 768px;
+    width: 90%;
     margin: 0 auto;
   }
   .card-box {
@@ -171,7 +171,7 @@ a {
 
 @media (max-width: 768px) {
   body{
-    width: 500px;
+    width: 90%;
     margin: 0 auto;
   }
   .card-box {
