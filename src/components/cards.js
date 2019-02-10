@@ -1,39 +1,67 @@
 import React from 'react';
+import Data from '../data/cards_descriptions.json';
 
 class Card extends React.Component {
-  render() {
-    return (
+
+  getRating = (data) => {
+    let rating = [];
+    for (let i = 0; i < data.rating; i++) {
+      rating.push(<i class="fas fa-star"></i>);
+    }
+
+    for (let i = 0; i < 5 - data.rating; i++) {
+      rating.push(
+        <i class="far fa-star"></i>
+      );
+    }
+    return rating;
+  }
+
+  getTags = (data) => {
+    let tags = [];
+
+    for (let i = 0; i < data.tags.length; i++) {
+      tags.push(
+        <span class="card__offer_tag">
+            {data.tags[i]}
+        </span>
+      );
+    }
+    return tags;
+  }
+
+  getCards = () => {
+    let cardArray = [];
+
+    for (let i = 0; i < Data.length; i++) {
+      cardArray.push(
         <div class="card-box">
           <div class="card">
             <div class="card__photo horizontal">
-              <img src="phone.jpg" class="card__photo_img" alt="Товар" />
+              <img src={Data[i].photo} class="card__photo_img" alt="Товар" />
             </div>
             <div class="card__description horizontal">
               <div class="card__description_short">
                 <div class="card__title">
-                    3.5" Смартфон AGmobile AG Zoom 4 ГБ черный
+                    {Data[i].title}
                 </div>
                 <div class="card__offer">
-                    Лучшая цена
+                  {this.getTags(Data[i])}
                 </div>
               </div>
               <div class="card__characteristics">
-                [4x1.4 ГГц, 2 ГБ, 2 SIM, IPS, 1440x720, камера 13 Мп, 3G, 4G, GPS, 3070 мАч]
+                [{Data[i].characteristic}]
               </div>
               <div class="card__rating">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
+                {this.getRating(Data[i])}
               </div>
               <div class="code">
-                Код:1119284
+                Код:{Data[i].code}
               </div>
               <div class="card__cost">
-                  1999 &#8381;
+                  {Data[i].cost} {Data[i].valute}
               </div>
-            </div>  
+            </div>
             <div class="buttons">
               <div class="card__buttons">
                 <div class="buttons__buy-buttons">
@@ -55,19 +83,27 @@ class Card extends React.Component {
                   <a href="index.html" class="hidden">Избранное</a>
                 </div>
               </div>
-            </div>  
+            </div>
             <div class="card__avails">
               <div class="card__avails_shop">
-                В наличии: 
-                <a href="index.html"> в 2 магазинах</a>
+                В наличии:
+                <a href="index.html"> {Data[i].available}</a>
               </div>
               <div class="card__avails_delivery">
-                Доставим на дом: 
-                <a href="index.html"> завтра</a>
+                Доставим на дом:
+                <a href="index.html"> {Data[i].delivery}</a>
               </div>
             </div>
           </div>
         </div>
+      );
+    }
+    return cardArray;
+  }
+
+  render() {
+    return (
+      this.getCards()
     );
   }
 }

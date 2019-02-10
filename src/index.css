@@ -51,7 +51,7 @@ a {
 }
 
 .card__photo_img {
-  max-width: 100px;
+  max-width: 150px;
   height: auto;
 }
 
@@ -61,7 +61,7 @@ a {
   margin-bottom: 10px;
 }
 
-.card__offer {
+.card__offer_tag {
   background-color:rgba(233, 30, 99, 0.2);
   display: inline;
   border-radius: 8px;
@@ -69,6 +69,7 @@ a {
   padding: 3px 6px 3px 6px;
   font-size: 14px;
   color: #e91e63;
+  margin-right: 5px;
 }
 
 .card__compare, .card__favour {

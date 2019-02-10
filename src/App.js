@@ -6,12 +6,6 @@ class App extends React.Component {
     return (
       <div class="container">
         <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
       </div>
     );
   }
