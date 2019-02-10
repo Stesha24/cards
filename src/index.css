@@ -214,6 +214,7 @@ a {
   .card__rating {
     position: absolute;
     left: 3%;
+    top: 53%;
   }
 
   .buttons {
@@ -227,7 +228,7 @@ a {
 
   .hidden {
     display: inline;
-  }  
+  }
 
   .code {
     display: block;
@@ -394,7 +395,7 @@ a {
     margin-right: 10px;
   }
 }
-/* 
+/*
 @media (max-width: 500px) {
   body {
     width: 100%;
