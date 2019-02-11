@@ -29,6 +29,8 @@
   .card__photo {
     width: 100%;
     text-align: center;
+    min-height: 200px;
+    line-height: 200px;
   }
   
   .card__photo_img {
@@ -182,6 +184,8 @@
   
     .card__photo {
       width: 25%;
+      min-height: 150px;
+      line-height: 150px;
       display: inline-block;
     }
   
@@ -297,6 +301,8 @@
   
     .card__photo {
       width: 49%;
+      max-height: 180px;
+      line-height: 180px;
     }
   
     .burger {
