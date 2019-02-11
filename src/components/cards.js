@@ -1,5 +1,6 @@
 import React from 'react';
 import Data from '../data/cards_descriptions.json';
+import Styles from './cards.css'
 
 class Card extends React.Component {
 
