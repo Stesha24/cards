@@ -32,10 +32,10 @@
   }
   
   .card__photo_img {
-    min-width: 90px;
+    max-width: 120px;
     max-height: 150px;
-    max-width: 140px;
-    height: auto;
+    min-width: 100px;
+    width: auto;
   }
   
   .card__title {
@@ -157,7 +157,7 @@
     display: none;
   }
   
-  @media (max-width: 1024px) {
+  @media (max-width: 1070px) {
     body{
       width: 90%;
       margin: 0 auto;
@@ -181,12 +181,8 @@
     }
   
     .card__photo {
-      width: 15%;
+      width: 25%;
       display: inline-block;
-    }
-  
-    .card__photo_img {
-      width: 100%;
     }
   
     .card__characteristics {
@@ -198,7 +194,7 @@
   
     .card__rating {
       position: absolute;
-      left: 3%;
+      left: 8%;
       top: 53%;
     }
   
@@ -252,7 +248,7 @@
   
     .card__description {
       vertical-align: top;
-      width: 55%;
+      width: 45%;
     }
   
     .button__buy, .button__buy1click {
@@ -312,6 +308,7 @@
       cursor: pointer;
       vertical-align: middle;
       float: right;
+      vertical-align: middle;
     }
   
     .burger:hover {
@@ -371,6 +368,7 @@
       width: 45%;
       font-size: 14px;
       padding: 7px 10px;
+      vertical-align: middle;
     }
     .button__buy1click {
       display: inline-block;
@@ -378,6 +376,7 @@
       font-size: 14px;
       padding: 7px 10px;
       margin-right: 10px;
+      vertical-align: top;
     }
   }
   
